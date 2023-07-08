@@ -35,6 +35,10 @@ const MainWrapper = styled.section`
       bottom: 0px;
     }
   }
+
+  @media (max-width: 767px) {
+    width: 90%;
+  }
 `;
 
 const Main = () => {

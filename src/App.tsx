@@ -5,8 +5,9 @@ import Career from "./components/Career";
 import Stack from "./components/Stack";
 import Project from "./components/Project";
 import Personality from "./components/Personality";
+import Footer from "./components/Footer";
 
-const AppWrapper = styled.div`
+const AppWrapper = styled.main`
   width: 100vw;
   height: 100%;
   background-color: ${bgColor};
@@ -14,7 +15,6 @@ const AppWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
 `;
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
       <Career />
       <Stack />
       <Project />
+      <Footer />
     </AppWrapper>
   );
 }

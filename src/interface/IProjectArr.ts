@@ -1,5 +1,5 @@
 export interface IProjectArr {
-  imgUrl: string;
+  imgUrl: string[];
   title: string;
   stacks: string[];
   github: string;

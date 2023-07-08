@@ -1,13 +1,9 @@
 import styled from "styled-components";
 import { borderColor, colorObj } from "../utils/color";
+import { IProjectArr } from "../interface/IProjectArr";
 
-interface IProjectItem {
-  imgUrl: string;
-  title: string;
-  stacks: string[];
-  github: string;
-  link: string;
-  onSlider: () => void;
+interface IProjectItem extends IProjectArr {
+  onSlider: (imgs: string[]) => void;
 }
 
 const ProjectWrapper = styled.div`
@@ -20,7 +16,7 @@ const ProjectWrapper = styled.div`
   cursor: pointer;
 
   &:hover {
-    top: 10px;
+    top: -10px;
     background-color: lightgray;
   }
 
@@ -73,6 +69,10 @@ const ProjectWrapper = styled.div`
       margin-bottom: 10px;
     }
   }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 const ProjectItem = ({
@@ -84,8 +84,8 @@ const ProjectItem = ({
   onSlider,
 }: IProjectItem) => {
   return (
-    <ProjectWrapper onClick={onSlider}>
-      <img src={imgUrl} alt="img" className="img" />
+    <ProjectWrapper onClick={() => onSlider(imgUrl)}>
+      <img src={imgUrl[0]} alt="img" className="img" />
       <div className="body">
         <div className="title">{title}</div>
         <ul className="stacks">
@@ -101,10 +101,22 @@ const ProjectItem = ({
             );
           })}
         </ul>
-        <a href={github} className="git" target="_blank" rel="noreferrer">
+        <a
+          href={github}
+          className="git"
+          target="_blank"
+          rel="noreferrer"
+          onClick={(e) => e.stopPropagation()}
+        >
           깃허브 바로가기
         </a>
-        <a href={link} className="link" target="_blank" rel="noreferrer">
+        <a
+          href={link}
+          className="link"
+          target="_blank"
+          rel="noreferrer"
+          onClick={(e) => e.stopPropagation()}
+        >
           사이트 바로가기
         </a>
       </div>

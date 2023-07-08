@@ -1,20 +1,12 @@
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider, { Settings } from "react-slick";
+import Slider from "react-slick";
 
 interface IProject {
   imgs: string[];
   unSlider: () => void;
 }
-
-const setting: Settings = {
-  dots: false,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
 
 const ProjectSliderWrap = styled.div`
   position: fixed;
@@ -48,8 +40,10 @@ const SliderComponent = styled(Slider)`
   justify-content: center;
 
   img {
-    width: 600px;
+    background-color: white;
+    width: 100%;
     height: 450px;
+    object-fit: contain;
   }
 
   @media (max-width: 767px) {
@@ -66,7 +60,7 @@ const SliderComponent = styled(Slider)`
 const ProjectSlider = ({ imgs, unSlider }: IProject) => {
   return (
     <ProjectSliderWrap>
-      <SliderComponent {...setting}>
+      <SliderComponent>
         {imgs.map((item: string, i: number) => {
           return <img src={item} key={i} alt={item}></img>;
         })}

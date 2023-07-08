@@ -18,8 +18,10 @@ const ProjectWrpper = styled(ContainerStyled)`
 
 const Project = () => {
   const [isSlider, setIsSlider] = useState<boolean>(false);
+  const [selectImgs, setSelectImgs] = useState<string[]>([]);
 
-  const onSlider = () => {
+  const onSlider = (imgs: string[]) => {
+    setSelectImgs(imgs);
     setIsSlider(true);
   };
 
@@ -35,12 +37,7 @@ const Project = () => {
           return <ProjectItem {...item} onSlider={onSlider} key={item.title} />;
         })}
       </div>
-      {isSlider && (
-        <ProjectSlider
-          imgs={["/recipe.png", "/shopping.png", "/poke.png"]}
-          unSlider={unSlider}
-        />
-      )}
+      {isSlider && <ProjectSlider imgs={selectImgs} unSlider={unSlider} />}
     </ProjectWrpper>
   );
 };
