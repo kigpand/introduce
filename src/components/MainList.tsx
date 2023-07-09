@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import LinkList from "../atoms/List";
+import LinkList from "./LinkList";
 
 const ListStyled = styled.div`
   width: 40%;
@@ -10,7 +10,7 @@ const ListStyled = styled.div`
   flex-direction: column;
   align-items: flex-end;
 
-  .header {
+  .listHeader {
     width: 100%;
     text-align: end;
     font-size: 14px;
@@ -22,7 +22,7 @@ const ListStyled = styled.div`
 const MainList = () => {
   return (
     <ListStyled>
-      <div className="header">저는 이렇게 공부해요!</div>
+      <div className="listHeader">저는 이렇게 공부해요!</div>
       <LinkList text="Github" link="https://github.com/kigpand" />
       <LinkList
         text="Notion"

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Title from "../atoms/Title";
+import Title from "./Title";
 import { ContainerStyled } from "../utils/styles";
 import StackList from "./StackList";
 

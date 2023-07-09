@@ -12,28 +12,17 @@ const MainWrapper = styled.section`
   display: flex;
   align-items: start;
   flex-direction: column;
-  animation: fadeIn 0.5s linear forwards;
 
   .img {
     height: 150px;
     object-fit: contain;
+    background-color: white;
+    border-radius: 50%;
   }
 
   .intro {
     width: 100%;
     display: flex;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      bottom: -20px;
-    }
-
-    100% {
-      opacity: 1;
-      bottom: 0px;
-    }
   }
 
   @media (max-width: 767px) {

@@ -54,3 +54,51 @@ export const projectArr = [
     link: "https://kigpand.github.io/cook-recipe/",
   },
 ];
+
+export const careerArr = [
+  {
+    company: "다비오",
+    date: "2021.11.01 ~ 2023.02.28",
+    detail: [
+      {
+        title: "dabeeomaps 라이브러리(threejs, typescript) 개발 및 유지보수",
+        stack: ["Typescript", "Three.js"],
+      },
+      {
+        title: "롯데 키오스크 프로젝트 프론트엔드",
+        stack: [
+          "React",
+          "Scss",
+          "Typescript",
+          "styled-components",
+          "React-Query",
+          "Zustand",
+        ],
+      },
+      {
+        title: "내부 데모사이트 제작 및 유지 보수",
+        stack: ["React", "Scss", "Typescript", "Redux"],
+      },
+      {
+        title: "WebXR 네비게이션 Web App 개발",
+        stack: [
+          "React",
+          "styled-components",
+          "Typescript",
+          "Redux",
+          "Three.js",
+        ],
+      },
+    ],
+  },
+  {
+    company: "창소프트아이앤아이",
+    date: "2021.04.01 ~ 2021.09.30",
+    detail: [
+      {
+        title: "B2C 웹 앱 개발 및 유지보수",
+        stack: ["React", "Typescript", "styled-components", "GraphQL"],
+      },
+    ],
+  },
+];

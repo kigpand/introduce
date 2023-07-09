@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { borderColor } from "../utils/color";
+import { mainColor } from "../utils/color";
 
 const IntroStyeld = styled.p`
   margin: 0;
   width: 60%;
   padding: 20px 20px 20px 0;
-  border-right: 1px solid ${borderColor};
+  border-right: 1px solid ${mainColor};
   line-height: 40px;
 `;
 

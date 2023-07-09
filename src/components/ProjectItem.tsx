@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { borderColor, colorObj } from "../utils/color";
+import { mainColor, colorObj } from "../utils/color";
 import { IProjectArr } from "../interface/IProjectArr";
 
 interface IProjectItem extends IProjectArr {
@@ -11,7 +11,7 @@ const ProjectWrapper = styled.div`
   width: 47%;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid ${borderColor};
+  border: 1px solid ${mainColor};
   margin-top: 20px;
   cursor: pointer;
 
@@ -23,7 +23,7 @@ const ProjectWrapper = styled.div`
   .img {
     width: 100%;
     height: 200px;
-    border-bottom: 1px solid ${borderColor};
+    border-bottom: 1px solid ${mainColor};
   }
 
   .body {

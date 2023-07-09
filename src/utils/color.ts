@@ -1,7 +1,7 @@
 export const black61 = "rgb(61, 61, 61)";
 export const bgColor = "white";
 export const fontColor = "black";
-export const borderColor = "lightgray";
+export const mainColor = "#3eafff";
 
 export const colorObj: any = {
   React: "skyblue",
@@ -15,4 +15,7 @@ export const colorObj: any = {
   "Tailwind css": "#4efff3",
   "Google APIs": "#afff38",
   "Kakao APIs": "#ff8000",
+  "React-Query": "#ff00ff",
+  "Three.js": "#63c2c6",
+  GraphQL: "#c170ff",
 };

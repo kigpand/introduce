@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ContainerStyled } from "../utils/styles";
-import Title from "../atoms/Title";
+import Title from "./Title";
 import ProjectItem from "./ProjectItem";
 import ProjectSlider from "./ProjectSlider";
 import { useState } from "react";

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { borderColor } from "../utils/color";
+import { mainColor } from "../utils/color";
 
 interface ITitle {
   title: string;
@@ -10,7 +10,7 @@ const TitleStyled = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  border-bottom: 1px solid ${borderColor};
+  border-bottom: 1px solid ${mainColor};
 
   .img {
     height: 30px;

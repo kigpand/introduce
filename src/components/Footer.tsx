@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { mainColor } from "../utils/color";
 
 const FooterWrap = styled.footer`
   width: 100%;
-  background-color: #707070;
+  background-color: ${mainColor};
   color: white;
   display: flex;
   align-items: center;
@@ -12,6 +13,10 @@ const FooterWrap = styled.footer`
 
   span {
     margin: 0 10px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 12px;
   }
 `;
 

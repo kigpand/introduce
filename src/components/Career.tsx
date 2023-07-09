@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import Title from "../atoms/Title";
+import Title from "./Title";
 import CareerList from "./CareerList";
 import { ContainerStyled } from "../utils/styles";
+import { careerArr } from "../utils/data";
+import { ICareerArr } from "../interface/ICareerArr";
 
 const CareerStyled = styled(ContainerStyled)`
   .list {
@@ -15,11 +17,9 @@ const Career = () => {
     <CareerStyled>
       <Title title="경력(1년 11개월)" imgUrl="/career.png" />
       <ul className="list">
-        <CareerList company="다비오" date="2021.11.01 ~ 2023.02.28" />
-        <CareerList
-          company="창소프트아이앤아이"
-          date="2021.04.01 ~ 2021.09.30"
-        />
+        {careerArr.map((item: ICareerArr) => {
+          return <CareerList {...item} key={item.company} />;
+        })}
       </ul>
     </CareerStyled>
   );

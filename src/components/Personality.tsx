@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ContainerStyled } from "../utils/styles";
-import Title from "../atoms/Title";
+import Title from "./Title";
 import PersonalityList from "./PersonalityList";
 
 const PersonalityWrap = styled(ContainerStyled)``;

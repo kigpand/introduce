@@ -17,6 +17,7 @@ const LinkListStyled = styled.a`
   margin-bottom: 20px;
 
   &:hover {
+    color: black;
     text-decoration: underline;
   }
 `;

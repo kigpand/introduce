@@ -2,34 +2,12 @@ import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { ModalStyled } from "../utils/styles";
 
 interface IProject {
   imgs: string[];
   unSlider: () => void;
 }
-
-const ProjectSliderWrap = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    cursor: pointer;
-  }
-`;
 
 const SliderComponent = styled(Slider)`
   position: relative;
@@ -59,14 +37,14 @@ const SliderComponent = styled(Slider)`
 
 const ProjectSlider = ({ imgs, unSlider }: IProject) => {
   return (
-    <ProjectSliderWrap>
+    <ModalStyled>
       <SliderComponent>
         {imgs.map((item: string, i: number) => {
           return <img src={item} key={i} alt={item}></img>;
         })}
       </SliderComponent>
       <div className="back" onClick={unSlider}></div>
-    </ProjectSliderWrap>
+    </ModalStyled>
   );
 };
 
